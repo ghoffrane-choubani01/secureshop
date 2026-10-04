@@ -1,0 +1,13 @@
+name: CI as-is
+on: [push, pull_request]
+jobs:
+  build-test-package:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: { node-version: 16 }
+      - run: npm install
+      - run: npm test
+      - run: docker build -t secureshop:latest .
+      - run: echo "Déploiement en production..."
