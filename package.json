@@ -1,0 +1,16 @@
+{
+  "name": "secureshop",
+  "version": "1.0.0",
+  "main": "app.js",
+  "scripts": { "start": "node app.js", "test": "node test.js" },
+  "dependencies": {
+    "express": "4.16.0",
+    "lodash": "4.17.15",
+    "minimist": "1.2.0",
+    "sqlite3": "^5.1.7"
+  },
+  "devDependencies": {
+    "eslint": "^9.0.0",
+    "eslint-plugin-security": "^3.0.0"
+  }
+}
